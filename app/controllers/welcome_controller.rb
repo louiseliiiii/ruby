@@ -6,3 +6,4 @@ class WelcomeController < ApplicationController
   end
 
 end
+#before_filter :authenticate_user!, except: [:index, :show]
