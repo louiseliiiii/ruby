@@ -16,16 +16,17 @@
         <a href="/"><span class="glyphicon glyphicon-home"></span> Home</a>
       </li>
       <li>
-        <a href="https://devcenter.heroku.com/articles/how-heroku-works"><span class="glyphicon glyphicon-user"></span> How Heroku Works</a>
+
       </li>
       <li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="glyphicon glyphicon-info-sign"></span> Getting Started Guides <span class="caret"></span></a>
 
+          <ul class="dropdown-menu" role="menu">
+            </ul>
       </li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
       <li class="navbar-right">
-        <% if user_signed_in? %>
+    <% if user_signed_in? %>
     Logged in as <strong><%= current_user.email %></strong>.
     <%= link_to 'Edit profile', edit_user_registration_path %> |
     <%= link_to "Logout", destroy_user_session_path, method: :delete %>
@@ -33,8 +34,6 @@
     <%= link_to "Sign up", new_user_registration_path %> |
     <%= link_to "Login", new_user_session_path %>
   <% end %>
-
-
       </li>
     </ul>
   </div>
